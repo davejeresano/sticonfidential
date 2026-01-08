@@ -17,7 +17,7 @@ loginForm.addEventListener('submit', async function(e) {
     };
 
     try {
-        const response = await fetch('http://localhost:5000/api/auth/login', {
+        const response = await fetch('https://sticonfidential.onrender.com/api/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(loginData)
@@ -27,18 +27,14 @@ loginForm.addEventListener('submit', async function(e) {
 
         if (response.ok) {
             alert('Login Successful!');
-            
-            // I-save ang mahahalagang info
             localStorage.setItem('token', result.token);
             localStorage.setItem('username', result.user.username);
             localStorage.setItem('campus', result.user.campus);
-            
-            // Redirect palabas ng 'src/pages' folder patungong root
             window.location.href = '../../index.html';
         } else {
             alert(result.msg || 'Login failed');
         }
     } catch (error) {
-        alert('Server is not responding. Check your backend.');
+        alert('Server is not responding. Please try again later.');
     }
 });

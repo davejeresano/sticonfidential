@@ -1,4 +1,4 @@
-const socket = io('http://localhost:5000');
+const socket = io('https://sticonfidential.onrender.com');
 
 document.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('token');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         div.innerHTML = `
             <div class="msg-bubble ${isMe}">
-                <span class="sender">${data.sender}</span>
+                <span class="sender">Anonymous</span>
                 <p class="text">${data.text}</p>
                 <span class="msg-time">${data.time}</span>
             </div>
