@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STI Confidential | Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/auth.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="logo-section">
+                <img src="../../public/logo.png" alt="Logo" class="main-logo">
+                <h1>Welcome Back</h1>
+                <p>Enter the void anonymously.</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="loginUsername" placeholder="Enter your alias" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="password-container">
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        <span class="toggle-password" id="toggleLoginPassword">👁️</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="register-btn">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an alias yet? <a href="register.html">Register here</a>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/login.js"></script>
+</body>
+</html>

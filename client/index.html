@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Void | STI Confidential</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="public/logo.png" alt="Logo" class="mini-logo">
+                <h2>The Void</h2>
+            </div>
+            <nav class="channels">
+                <p class="section-title">Departments</p>
+                <div class="channel active"># general</div>
+                <div class="channel"># it-computing</div>
+                <div class="channel"># business</div>
+                <div class="channel"># hospitality</div>
+                <div class="channel"># engineering</div>
+            </nav>
+            <div class="user-profile">
+                <div class="user-info">
+                    <span id="displayUsername">Loading Alias...</span>
+                    <small id="displayCampus">Loading Campus...</small>
+                </div>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="channel-info">
+                    <h3># general</h3>
+                    <p>Share your secrets with everyone.</p>
+                </div>
+            </header>
+
+            <div class="messages-container" id="messages">
+                <div class="message-wrapper">
+                    <div class="msg-bubble system-msg">
+                        <span class="sender">System</span>
+                        <p class="text">Welcome to the Void. Stay anonymous.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="message-input-form" id="chatForm">
+                <input type="text" id="messageInput" placeholder="Type a confession..." autocomplete="off" required>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="src/scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STI Confidential | Join the Void</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/auth.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="logo-section">
+                <img src="../../public/logo.png" alt="STI Confidential Logo" class="main-logo">
+                <h1>STI Confidential</h1>
+                <p>Exclusive Anonymous Chat for STIers</p>
+            </div>
+
+            <form id="registerForm">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Pick a cool alias" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Region</label>
+                    <select id="region" required>
+                        <option value="" disabled selected>Select Region</option>
+                        <option value="metro_manila">Metro Manila</option>
+                        <option value="northern_central_luzon">Northern & Central Luzon</option>
+                        <option value="southern_luzon">Southern Luzon & CALABARZON</option>
+                        <option value="visayas">Visayas</option>
+                        <option value="mindanao">Mindanao</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Campus</label>
+                    <select id="campus" disabled required>
+                        <option value="" disabled selected>Select Region First</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Department</label>
+                    <select id="department" required>
+                        <option value="" disabled selected>Select Department</option>
+                        <option value="it_computing">Information Technology & Computing</option>
+                        <option value="business_management">Business & Management</option>
+                        <option value="hospitality_tourism">Hospitality & Tourism</option>
+                        <option value="engineering">Engineering & Tech</option>
+                        <option value="arts_sciences">Arts & Sciences</option>
+                        <option value="maritime">Maritime</option>
+                        <option value="criminal_justice">Criminal Justice</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Secure Your Secrets" required>
+                        <span class="toggle-password" id="togglePassword">👁️</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="register-btn">Register Now</button>
+            </form>
+
+            <div class="auth-footer">
+                Already have an account? <a href="login.html">Log in</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/register.js"></script>
+</body>
+</html>
